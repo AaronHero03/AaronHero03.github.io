@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>La pagina mas feo</title>
+	</head>
+	<body>
+		<h1>La pagina más fea</h1>
+
+		<div id="html">
+			<h1>HTML</h1>
+			<div id="introduccion">
+				<h2>Introducción</h2>
+				<div>
+					<h3>What is HTML?</h3>
+					<p>
+						HTML es un lenguaje de etiquetado diseñado con el proposito de crear
+						páginas web, este se utiliza para generar la estructura de una
+						pagina mediante etiquetas que representan elementos, es el lenguaje
+						estandar que entienden los navegadores web
+					</p>
+				</div>
+				<div>
+					<h3>Explain the head and the body tags</h3>
+					<p>
+						La etiqueta de "head" es necesaria en todos los documentos html, se
+						utiliza para agregar metadatos a la pagina, como el lenguaje, el
+						titulo, el metodo de encoding y otros elementos mas necesarios para
+						la visualización de la página en cualquier navegador
+					</p>
+				</div>
+			</div>
+
+			<div id="basic tags">
+				<h2>Basic tags</h2>
+				<div>
+					<h3>
+						Explica las etiquestas: section, article, aside, header y footer
+					</h3>
+					<p>
+						Cada una de estas etiquetas se utilizan para dar estructura a la
+						pagina, sirviendo como organizadores de la informacion. Cada una se
+						encarga de lo siguiente:
+					</p>
+					<ul>
+						<li>
+							Section: Representa una sección de la pagina, tiene un proposito
+							general
+						</li>
+						<li>
+							Article: Se utiliza para envolver contenido que es en una parte
+							independiente, practicamente como un articulo en un periodico, su
+							uso más común es en blogs o sitios de noticias
+						</li>
+						<li>
+							Aside: Se utiliza normalmente para agregar información secundaria
+							en una pagina, su uso más común es como barra lateral mostrando
+							publicidad.
+						</li>
+						<li>
+							Header: Es la primera parte que se observa de una página,
+							normalmente incluye la barra de navegación, algunas veces el Hero
+							se inserta aqui, practicamente es el encabezado de una página web
+						</li>
+						<li>
+							Footer: Suele representar la ultima parte de una página web y es
+							muy comun en la mayoría de páginas, es la sección hasta abajo de
+							las páginas y normalmente tiene enlaces a redes sociales, medios
+							de comunicación o simplemente el logo de la página
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Ejemplo de una tabla</h3>
+					<table>
+						<tr>
+							<th>Nombre</th>
+							<th>Edad</th>
+						</tr>
+						<tr>
+							<td>Ana</td>
+							<td>25</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div id="css">
+			<div id="introduccion-css">
+				<h2>Introducción</h2>
+				<div>
+					<h3>What is CSS?</h3>
+					<p>
+						Es un lenguaje de diseño utilizado justamente para definir la
+						apariencia visual en documentos html, trabaja conjuntamente con HTML
+						permitiendo separar los estilos en un archivo separado, utilizado
+						selectores como clases, ids o etiquetas para asignar estilos y
+						propiedades a cada elemento de una página.
+					</p>
+				</div>
+				<div>
+					<h3>What's the purpouse of CSS?</h3>
+					<p>
+						El principal proposito de CSS es definir los estilos y apariencia
+						visual de una página web
+					</p>
+				</div>
+
+				<div>
+					<h3>How do you apply a CSS to an HTML</h3>
+					<ul>
+						<li>
+							Mediante un archivo externo, utilizando:
+							<code>&lt;link rel="stylesheet" href="style.css" /&gt</code>
+							dentro de la etiqueta de head
+						</li>
+						<li>
+							Internamente dentro de la etiqueta head tambien se puede definir
+							una etiqueta style donde se puede escribir el codigo css dentro
+							del mismo documento html
+						</li>
+						<li>
+							Inline dentro de cada elemento, tambien es posible incrustar
+							codigo css directamente dentro de cada etiqueta individualmente
+							mediante la propiedad "style"
+						</li>
+					</ul>
+				</div>
+
+				<div>
+					<h3>What is a selector</h3>
+					<p>
+						Un selector es un identificador que se utiliza para elegir entre
+						elementos de un documento HTML, hay de diferentes tipos, por ejemplo
+						clases, ids, etiquetas o incluso es posible seleccionar todo.
+					</p>
+					<h3>What is a CSS rule</h3>
+					<p>
+						Una regla de CSS es un código que establece como se deberia ver un
+						elemento, cada regla requiere de seleccionar un elemento ademas de
+						justamente las caracteristicas que se le quieren asignar a dicho
+						elemento.
+					</p>
+				</div>
+			</div>
+			<div id="basic-css">
+				<h2>Basic CSS</h2>
+				<div>
+					<h3>Explain a:</h3>
+					<ul>
+						<li>
+							Tag selector: Selecciona todos los elementos que tengan el nombre
+							de una etiqueta específica (como p, h1, div) y les aplica el
+							estilo de forma global.
+						</li>
+						<li>
+							Class selector: Selecciona elementos que tienen un atributo class
+							específico. Se identifica con un punto (.) antes del nombre.
+						</li>
+						<li>
+							Tag and class selector: Es cuando combinas ambos para ser más
+							específico, por ejemplo, <code>p.rojo</code> solo afectará a los
+							párrafos que tengan la clase "rojo", ignorando otros elementos con
+							esa misma clase.
+						</li>
+						<li>
+							Id selector: Selecciona un único elemento que tenga un atributo id
+							específico. Se identifica con un gato (#) y tiene más prioridad
+							que las clases.
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h3>What's a class?</h3>
+					<p>
+						Es un atributo que puedes repetir en varios elementos de tu HTML.
+						Sirve para agrupar diferentes etiquetas que quieres que compartan el
+						mismo diseño
+					</p>
+					<h3>What's an id?</h3>
+					<p>
+						Es un identificador único para un solo elemento en toda la página.
+						Se usa ademas de para establecer estilos para identificar un
+						elemento único para darle interactividad
+					</p>
+					<h3>How are they related to CSS?</h3>
+					<p>
+						Basicamente son la conexión que usa CSS para saber a que parte del
+						HTML debe modificar. Sin ellos, no podríamos diferenciar un párrafo
+						de otro al dar estilos.
+					</p>
+				</div>
+				<div>
+					<h3>Explain the CSS Box Model</h3>
+					<p>
+						El modelo Box es la forma en la que los objetos se comportan en CSS,
+						ya que este lenguaje cuenta con 4 propiedades clave que cada
+						contenedor tiene, estas son: margin(distancia a otros elementos),
+						padding (espacio extra que abarca el elemento), content (el
+						contenido de dicha caja) y border. Estos elementos conforman el
+						layout de cada elemento como un div, section, etc...
+					</p>
+				</div>
+				<div>
+					<h3>Explain the Media Queries</h3>
+					<p>
+						Los Media Queries son reglas que se pueden establecer en CSS con el
+						fin de crear paginas responsivas, practicamente funcionan similar a
+						condicionales, ya que te permite definir estilos condicionales segun
+						la orientacion del dispositivo, el tamaño de la pantalla y otras
+						caracteristicas.
+					</p>
+				</div>
+
+				<div id="layout-css">
+					<h2>Layout CSS</h2>
+					<div>
+						<h3>Explain display: grid</h3>
+						<p>
+							Es un modo de diseño en el que los contenedores se pueden manejar
+							como una cuadricula, utilizando columnas y filas
+						</p>
+					</div>
+					<div>
+						<h3>Explain display: flex</h3>
+						|
+						<p>
+							Es otra modalidad de diseño que se puede asignar a un contenedor
+							la cual es caracterizada por distribuir los elementos en una sola
+							dirección, pero es sumamente utilizada debido a las funciones que
+							te proporciona para alinear elementos y distribuir el espacio
+							dentro de un contenedor
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

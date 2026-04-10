@@ -1,0 +1,287 @@
+/* Estilos generales */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #ffffff;
+	color: #4a4a4a;
+	font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+}
+
+/* --- HEADER & NAVIGATION --- */
+header {
+	padding: 20px 10px;
+	max-width: 1050px; /* Un poco más comprimido como el original */
+	margin: 0 auto;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+	position: fixed;
+	padding: 8px 10px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: white;
+}
+
+nav img {
+	margin-right: 15px;
+}
+
+nav h1 {
+	color: #004a5d;
+	font-size: 26px;
+	font-weight: normal;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	margin-right: 40px;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	gap: 25px;
+	margin-right: auto;
+}
+
+nav ul li {
+	font-size: 18px; /* Más sutil */
+	color: #777;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+nav div button {
+	border: none;
+	border-radius: 3px;
+	padding: 8px 18px;
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+nav div button:first-child {
+	background-color: #e53935;
+	color: white;
+}
+
+nav div button:last-child {
+	background-color: #546e7a;
+	color: white;
+}
+
+/* Barra de Búsqueda */
+.search {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 10px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 650px;
+	margin: 120px auto 60px;
+	color: #aaa;
+	font-size: 16px;
+}
+
+.search-icon {
+	width: 18px; /* Tamaño del icono */
+	height: 18px;
+	fill: #004a5d; /* Color azul petróleo original */
+	cursor: pointer;
+	transition: opacity 0.2s;
+}
+
+.search-icon:hover {
+	opacity: 0.7; /* Pequeño efecto al pasar el mouse */
+}
+
+/* Categorías */
+.categories {
+	margin-bottom: 40px;
+}
+
+.categories ul {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	gap: 30px;
+}
+
+.categories li {
+	color: #004a5d;
+	font-weight: 700;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+/* --- SECCIÓN DE NOTICIAS --- */
+.content {
+	max-width: 1100px;
+	margin: 20px auto;
+	margin-bottom: 150px;
+	padding: 0 15px;
+}
+
+.news-container h2 {
+	color: #00252f;
+	font-size: 36px;
+	font-weight: 400;
+	margin-bottom: 5px;
+}
+
+.news {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+}
+
+/* TARJETAS DE NOTICIAS */
+.single-new {
+	background: #f7f7f7;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px; /* Bordes redondeados sutiles */
+	display: flex;
+	flex-direction: column;
+	overflow: hidden; /* Permite que la imagen respete el borde redondeado */
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04); /* Sombra muy ligera */
+}
+
+#big {
+	grid-column: span 2;
+}
+
+/* IMÁGENES CORREGIDAS AL 100% DEL ANCHO */
+.news-img {
+	width: 100%;
+	height: 180px; /* Altura fija para que todas las pequeñas sean iguales */
+	object-fit: cover;
+	object-position: top;
+	border-bottom: 1px solid #eee;
+	display: block; /* Elimina márgenes fantasma */
+}
+
+#big .news-img {
+	height: 275px; /* La noticia principal es más alta */
+	width: 90%;
+	margin: 0 auto;
+	object-fit: contain;
+}
+
+.new-content {
+	padding: 15px;
+	flex-grow: 1; /* Hace que el contenido ocupe el espacio disponible */
+}
+
+.new-title {
+	color: #004a5d;
+	font-size: 17px;
+	margin-bottom: 8px;
+	font-weight: bold;
+}
+
+.new-description {
+	font-size: 16px; /* Texto más pequeño, como en la web real */
+	color: #777;
+	line-height: 1.4;
+}
+
+.Date {
+	padding: 0 15px 15px;
+	font-size: 11px;
+	color: #999;
+	text-align: right;
+	margin-top: auto; /* Empuja la fecha siempre al fondo, alineando todas las tarjetas */
+}
+
+/* --- FOOTER --- */
+footer {
+	background-color: #efefef; /* Fondo gris claro */
+	margin-top: 60px;
+	padding: 60px 0 40px; /* Espacio extra arriba para el botón */
+	position: relative;
+	border-top: none;
+}
+
+#top {
+	position: absolute;
+	top: -35px; /* Sube el botón para que quede mitad afuera y mitad adentro */
+	left: 50%;
+	transform: translateX(-50%); /* Centrado perfecto */
+	width: 70px;
+	height: 70px;
+	background-color: #ffffff;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #666;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#top svg {
+	width: 14px;
+	height: 14px;
+	fill: #888;
+	margin-bottom: 2px;
+}
+
+.sponsors {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	max-width: 950px;
+	margin: 0 auto;
+	gap: 25px;
+	padding: 0 15px;
+}
+
+.single-sponsor {
+	flex: 1; /* Todos los patrocinadores ocupan el mismo ancho */
+	display: flex;
+	flex-direction: column;
+}
+
+.sponsor-logo {
+	min-height: 100px;
+	max-width: 100%; /* Fija la altura para que se vean alineados */
+	object-fit: contain; /* Evita que las imágenes se deformen */
+	object-position: center; /* Alinea los logos hacia la izquierda y abajo */
+	margin-bottom: 15px;
+}
+
+.sponsor-description {
+	font-size: 13px;
+	color: #666;
+	line-height: 1.5;
+}
+
+/* Redes Sociales */
+.social-icons {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	margin-top: 50px;
+}
+
+.social-icon {
+	width: 22px;
+	height: 22px;
+	fill: #aaa;
+	cursor: pointer;
+	transition: fill 0.2s;
+}
+
+.social-icon:hover {
+	fill: #666; /* Se oscurece al pasar el mouse */
+}

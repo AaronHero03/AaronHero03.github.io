@@ -1,0 +1,142 @@
+/* 1. Configuración del body para que el contenedor se estire correctamente */
+body {
+	background-color: #efefef;
+	display: flex;
+	justify-content: left;
+	height: 100vh;
+	overflow-y: hidden;
+	margin: 0;
+}
+
+.contenedor {
+	height: 100%;
+	background-color: #ffffff;
+	padding: 30px;
+	box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+	width: 40%;
+	text-align: center;
+}
+
+/* 3. Estilo para las secciones de texto */
+.elemento {
+	background-color: #f8f9fa;
+	margin-bottom: 15px;
+	padding: 20px;
+	border-radius: 8px;
+	border: 1px solid #e9ecef;
+	color: #495057;
+	font-weight: 500;
+	transition: transform 0.2s;
+}
+
+.elemento:hover {
+	transform: scale(1.02);
+}
+
+/* 4. El botón */
+button {
+	background-color: #f91616;
+	color: white;
+	border: none;
+	width: 100%;
+	padding: 15px 20px;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 16px;
+	margin: 5px 0px;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+button:hover {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#boton-a {
+	background-color: #570bdb;
+}
+
+#image-view img {
+	border-radius: 12px;
+	margin-top: 15px;
+	margin: 0 auto;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+	color: #212529;
+	font-weight: bold;
+	margin-top: 20px;
+	font-size: 1.1em;
+}
+
+.artist {
+	height: 100%;
+	width: 60%;
+	background-color: #fcfcfc;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 60px 40px;
+	box-shadow: 0 5px 20px -12px rgba(0, 0, 0, 0.5);
+	color: #1a1a1a;
+	overflow-y: auto;
+	scroll-behavior: smooth;
+}
+
+#img-container {
+	width: 100%;
+	max-width: 550px;
+	margin-bottom: 40px;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+#img-container img {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+	transition: all 0.5s ease-in;
+}
+
+#img-container img:hover {
+	transform: translateY(-10px) scale(1.02);
+	box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+}
+
+.decription {
+	width: 80%;
+	max-width: 650px;
+	text-align: center;
+}
+
+.decription h2 {
+	color: #111827;
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin: 0 0 10px 0;
+}
+
+.decription h2::after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 4px;
+	background-color: #183470;
+	margin: 15px auto;
+}
+
+.decription p {
+	color: #4b5563;
+	font-weight: 400;
+	line-height: 1.8;
+	font-size: 1.1rem;
+	text-align: justify;
+	margin-top: 20px;
+	border-top: 1px solid #eee;
+	padding-top: 20px;
+}
