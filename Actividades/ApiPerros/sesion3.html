@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mi página con Picnic CSS</title>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic" />
+
+		<style>
+			.flex.demo {
+				margin: 0.2em 0;
+				background: #dbe2dc;
+				text-align: center;
+			}
+			.flex.demo div {
+				border: 0.1em solid pink;
+			}
+			/* Añadí un pequeño margen al body para que no esté todo pegado a la orilla */
+			body {
+				padding: 2em;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<button id="un_boton">Haz algo</button>
+			<img id="imagen-dog" alt="Perro" width="600px" height="500px" />
+		</div>
+
+		<div>
+			<button id="un_boton_2">Haz otra cosa</button>
+		</div>
+
+		<div>
+			<button id="un_boton_3" class="warning">Ver historial de votos</button>
+		</div>
+
+		<div class="flex two four-1200 demo">
+			<div id="bio">1</div>
+			<div id="imagen">2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+		</div>
+
+		<br /><br />
+
+		<div class="tabs two">
+			<input id="tab-1" type="radio" name="tabgroupB" checked />
+			<label class="pseudo button toggle" for="tab-1">Respuesta 1</label>
+			<input id="tab-2" type="radio" name="tabgroupB" />
+			<label class="pseudo button toggle" for="tab-2">Respuesta 2</label>
+			<div class="row">
+				<div>
+					<h3>¿Como vas con tu reto?</h3>
+					<p>
+						Pues voy mas o menos bien, un poco perdido por el como lo vamos a
+						realizar pero por la parte de saber que quiere el socio-formador
+						vamos bien, avanzando de poco a poco.
+					</p>
+				</div>
+
+				<div>
+					<h3>¿Que te parece lo mas complicado de tu reto?</h3>
+					<p>
+						Lo más complicado siento que será el desarrollo del videojuego
+						debido a que se tiene que realizar un gran trabajo de diseño,
+						dinamica, físicas, sonido, historia, etc.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			let un_boton;
+
+			document.addEventListener("DOMContentLoaded", function () {
+				un_boton = document.getElementById("un_boton");
+				un_boton.addEventListener("click", irPorAlgo);
+
+				un_boton_2 = document.getElementById("un_boton_2");
+				un_boton_2.addEventListener("click", votar);
+
+				un_boton_3 = document.getElementById("un_boton_3");
+				un_boton_3.addEventListener("click", vervotos);
+			});
+
+			async function irPorAlgo() {
+				try {
+					const respuesta = await fetch(
+						"https://api.thedogapi.com/v1/images/search?limit=1",
+						{
+							method: "GET",
+							headers: {
+								"x-api-key":
+									"live_4010nXnpNuSgbuqv9gYPaNz6JYdKJH17BsyPoJm9iNqjKrI7CYMRb8oNyfHalvPo",
+							},
+						},
+					);
+					if (!respuesta.ok) {
+						console.log("Error");
+					}
+					const data = await respuesta.json();
+					console.log(data);
+					let imagen = document.getElementById("imagen-dog");
+					imagen.setAttribute("src", data[0].url);
+				} catch (error) {
+					console.error("Error:", error.message);
+				}
+			}
+
+			async function votar() {
+				try {
+					const respuesta = await fetch("https://api.thedogapi.com/v1/votes", {
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json",
+							"x-api-key":
+								"live_4010nXnpNuSgbuqv9gYPaNz6JYdKJH17BsyPoJm9iNqjKrI7CYMRb8oNyfHalvPo",
+						},
+						body: JSON.stringify({
+							image_id: "BJa4kxc4X",
+							value: 1,
+						}),
+					});
+					if (!respuesta.ok) {
+						console.log("Error");
+					}
+					const data = await respuesta.json();
+					console.log(data);
+				} catch (error) {
+					console.error("Error:", error.message);
+				}
+			}
+
+			async function vervotos() {
+				try {
+					const respuesta = await fetch("https://api.thedogapi.com/v1/votes", {
+						method: "GET",
+						headers: {
+							"x-api-key":
+								"live_4010nXnpNuSgbuqv9gYPaNz6JYdKJH17BsyPoJm9iNqjKrI7CYMRb8oNyfHalvPo",
+						},
+					});
+
+					if (!respuesta.ok) {
+						throw new Error("Error al obtener los votos");
+					}
+
+					const data = await respuesta.json();
+					console.log("Lista de votos:", data);
+
+					// Opcional: Mostrar el total de votos en la consola
+					console.log("Total de votos realizados:", data.length);
+				} catch (error) {
+					console.error("Hubo un problema:", error.message);
+				}
+			}
+		</script>
+	</body>
+</html>
