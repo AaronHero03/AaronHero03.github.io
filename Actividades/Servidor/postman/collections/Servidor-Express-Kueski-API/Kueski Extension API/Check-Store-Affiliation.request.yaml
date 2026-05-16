@@ -1,0 +1,9 @@
+$kind: http-request
+name: Check Store Affiliation
+method: GET
+url: '{{baseUrl}}/stores/check'
+order: 4000
+queryParams:
+  - key: domain
+    value: amazon.com.mx
+    description: 'Check if a store domain is affiliated. Uses query param ''domain'''

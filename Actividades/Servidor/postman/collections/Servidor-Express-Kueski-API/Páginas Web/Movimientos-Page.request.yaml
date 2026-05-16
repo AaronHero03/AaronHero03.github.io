@@ -1,0 +1,5 @@
+$kind: http-request
+name: Movimientos Page
+method: GET
+url: '{{baseUrl}}/movimientos'
+order: 3000

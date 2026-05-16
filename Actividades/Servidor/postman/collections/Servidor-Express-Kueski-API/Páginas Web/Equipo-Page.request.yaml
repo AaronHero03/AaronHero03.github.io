@@ -1,0 +1,5 @@
+$kind: http-request
+name: Equipo Page
+method: GET
+url: '{{baseUrl}}/equipo'
+order: 4000

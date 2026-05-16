@@ -1,0 +1,5 @@
+$kind: http-request
+name: Activate Cashback
+method: POST
+url: '{{baseUrl}}/cashback/activate'
+order: 5000

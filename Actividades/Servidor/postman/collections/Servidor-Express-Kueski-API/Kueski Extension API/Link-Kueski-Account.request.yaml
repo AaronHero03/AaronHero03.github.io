@@ -1,0 +1,5 @@
+$kind: http-request
+name: Link Kueski Account
+method: POST
+url: '{{baseUrl}}/auth/link'
+order: 3000

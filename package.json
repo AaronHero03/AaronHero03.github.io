@@ -19,6 +19,7 @@
 	},
 	"homepage": "https://github.com/AaronHero03/AaronHero03.github.io#readme",
 	"dependencies": {
-		"@binance/connector": "^3.6.1"
+		"@binance/connector": "^3.6.1",
+		"express": "^5.2.1"
 	}
 }

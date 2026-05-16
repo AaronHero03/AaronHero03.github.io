@@ -1,0 +1,5 @@
+$kind: http-request
+name: Opinion Page
+method: GET
+url: '{{baseUrl}}/opinion'
+order: 5000

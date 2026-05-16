@@ -1,0 +1,5 @@
+$kind: collection
+name: Servidor Express - Kueski API
+variables:
+  - key: baseUrl
+    value: 'http://localhost:1984'

@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get Payment Status
+method: GET
+url: '{{baseUrl}}/payment'
+order: 6000

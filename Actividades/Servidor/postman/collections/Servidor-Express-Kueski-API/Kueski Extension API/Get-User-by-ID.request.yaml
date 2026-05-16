@@ -1,0 +1,9 @@
+$kind: http-request
+name: Get User by ID
+method: GET
+url: '{{baseUrl}}/user/:id'
+order: 1000
+pathVariables:
+  - key: id
+    value: user_0001
+    description: 'Get a specific user. Example uses user_0001'

@@ -1,0 +1,5 @@
+$kind: http-request
+name: Perfil Page
+method: GET
+url: '{{baseUrl}}/perfil'
+order: 6000
